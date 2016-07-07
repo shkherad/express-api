@@ -5,8 +5,8 @@ curl --include --request POST http://localhost:3000/books \
 --header "Content-Type: application/json" \
 --data '{
   "book": {
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "price": 100.00
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "author": "JK Rowling",
+    "price": 18.00
   }
 }'

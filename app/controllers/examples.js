@@ -44,13 +44,13 @@ const update = (req, res, next) => {
 
 const destroy = (req, res, next) => {
   let search = { _id: req.params.id, _owner: req.currentUser._id };
-  Example.findOne(search)
-    .then(example => {
-      if (!example) {
+  Book.findOne(search)
+    .then(book => {
+      if (!book) {
         return next();
       }
 
-      return example.remove()
+      return book.remove()
         .then(() => res.sendStatus(200));
     })
     .catch(err => next(err));
